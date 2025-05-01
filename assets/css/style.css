@@ -101,3 +101,28 @@ main {
 footer {
     background-color: orange;
 }
+
+/* Media query: Tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header, to make sure the nav-bar is always displayed */
+    nav {
+        display: block;
+        position: relative; /* Back inside the header */
+        box-shadow: none; /* hide as its no longer needed */
+        width: fit-content; /* No longer taking up space in header */
+        padding-right: 1rem; /* So menu items do not stick to edge */
+    }
+
+    #menu {
+        display: flex; /* To set links side by side */
+    }
+
+    #menu > li {
+        padding-left: 1rem; /* Add padding to the left of each list item in the menu */
+    }
+
+    .nav-toggle-label {
+        display: none; /* Hide the x */
+    }
+}
+    
