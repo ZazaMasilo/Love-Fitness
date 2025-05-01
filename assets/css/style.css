@@ -94,6 +94,7 @@ main {
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down and should not shrink when screen is too small to show all the content */
     flex: 1 0 auto;
+    margin-top: 47px; /* To push the content down of place holder text */
 }
 
 /* Footer */
