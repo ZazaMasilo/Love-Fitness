@@ -32,6 +32,9 @@ header {
     z-index: 99; /* to make sure is layered on top of elements */
     width: 100%; /* make sure fills width of screen */
     box-shadow: 0 2px 2px #3a3a3a; /* Indicate it's layered on top of other content */
+    display: flex; /* Should make them show in a row */
+    justify-content: space-between; /* Adding space between */
+    align-items: baseline; /* Show in a line verticaly */
 }
 
 header a { /* syle rule for any a tag thats a decendent of the header*/
@@ -69,7 +72,22 @@ nav {
     padding: 0 1rem; /* Padding to line up nav elements below the logo */
     box-shadow: 0 2px 2px #3a3a3a; /* box-shadow like one on the header */
     display: none; /* so that the navbar items are hidden until user clicks to open */
+    top: 100%; /* Tells the navigation element that the top should start at the bottom of it's parent */
 }
+
+/* Nav toggle, checkboxes have a pseudo class which indicates when they are checked */
+#nav-toggle:checked~nav{ /* Tilde to indicate we want to target the adjoining nav element */
+     display: block;
+}
+
+#nav-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.nav-toggle-label {
+    font-size: 2rem; /* Make label larger so it's easier to tap */
+}
+
 
 /* Main */
 main {
