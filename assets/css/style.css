@@ -26,7 +26,12 @@ body {
 
 /* Header */
 header {
-    background-color: lightcoral;
+    background-color: #ffffff;
+    padding: 0 1rem; /* Prevent text from sticking to side of screen */
+    position: fixed; /* navbar to scroll along */
+    z-index: 99; /* to make sure is layered on top of elements */
+    width: 100%; /* make sure fills width of screen */
+    box-shadow: 0 2px 2px #3a3a3a; /* Indicate it's layered on top of other content */
 }
 
 h1 {
