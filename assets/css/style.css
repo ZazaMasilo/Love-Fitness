@@ -34,8 +34,16 @@ header {
     box-shadow: 0 2px 2px #3a3a3a; /* Indicate it's layered on top of other content */
 }
 
+header a { /* syle rule for any a tag thats a decendent of the header*/
+    text-decoration: none; /* Remove the default lines and blue colour on the links of the header */
+    color: inherit; /* inherits colour from body, takes care of default link applied by browser */
+}
+
 h1 {
     font-family: Oswald, sans-serif;
+    text-transform: uppercase; /* To easily change the casing */
+    letter-spacing: 2px; /* Provides breathing space between the letters */
+    color: #252525; /* stands out from the other links */
 }
 
 /* Main */
