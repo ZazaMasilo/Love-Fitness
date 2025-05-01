@@ -57,7 +57,18 @@ h1 {
 }
 
 .active {
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid #3a3a3a; /* To give the home menu a visual queue */ 
+}
+
+/* Navbar styles with dropdown toggle */ 
+nav {
+    position: absolute; /* Takes an element outside the normal flow of the page structure */
+    background-color: #ffffff;
+    width: 100%; /* Full length of screen */
+    left: 0; /* Align directly against left of screen */
+    padding: 0 1rem; /* Padding to line up nav elements below the logo */
+    box-shadow: 0 2px 2px #3a3a3a; /* box-shadow like one on the header */
+    display: none; /* so that the navbar items are hidden until user clicks to open */
 }
 
 /* Main */
