@@ -46,6 +46,20 @@ h1 {
     color: #252525; /* stands out from the other links */
 }
 
+#menu {
+    font-size: 110%; /* font size to links */
+    letter-spacing: 4px; /* letters spaced by 4px */
+    list-style-type: none; /* No bullet points */
+}
+
+#menu > li {
+    margin-bottom: 1em; /* Targets list items inside menu, spaced vertically */
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
 /* Main */
 main {
     background-color: lightblue;
