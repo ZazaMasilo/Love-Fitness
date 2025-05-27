@@ -19,73 +19,104 @@ body {
     /* Generic project styles */
     color: #3a3a3a;
     /* Adjust text colour for the body and will be applied to all other elements unless specified */
-    font-family: 'Lato', sans-serif; /* Apply the Lato font to all text as the base font */
-    
+    font-family: 'Lato', sans-serif;
+    /* Apply the Lato font to all text as the base font */
 
+}
+
+h1,h2,h3 {
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    /* To easily change the casing */
+    letter-spacing: 2px;
+    /* Provides breathing space between the letters */
+    color: #252525;
+    /* stands out from the other links */
 }
 
 /* Header */
 header {
     background-color: #ffffff;
-    padding: 0 1rem; /* Prevent text from sticking to side of screen */
-    position: fixed; /* navbar to scroll along */
-    z-index: 99; /* to make sure is layered on top of elements */
-    width: 100%; /* make sure fills width of screen */
-    box-shadow: 0 2px 2px #3a3a3a; /* Indicate it's layered on top of other content */
-    display: flex; /* Should make them show in a row */
-    justify-content: space-between; /* Adding space between */
-    align-items: baseline; /* Show in a line verticaly */
+    padding: 0 1rem;
+    /* Prevent text from sticking to side of screen */
+    position: fixed;
+    /* navbar to scroll along */
+    z-index: 99;
+    /* to make sure is layered on top of elements */
+    width: 100%;
+    /* make sure fills width of screen */
+    box-shadow: 0 2px 2px #3a3a3a;
+    /* Indicate it's layered on top of other content */
+    display: flex;
+    /* Should make them show in a row */
+    justify-content: space-between;
+    /* Adding space between */
+    align-items: baseline;
+    /* Show in a line verticaly */
 }
 
-header a { /* syle rule for any a tag thats a decendent of the header*/
-    text-decoration: none; /* Remove the default lines and blue colour on the links of the header */
-    color: inherit; /* inherits colour from body, takes care of default link applied by browser */
+header a {
+    /* syle rule for any a tag thats a decendent of the header*/
+    text-decoration: none;
+    /* Remove the default lines and blue colour on the links of the header */
+    color: inherit;
+    /* inherits colour from body, takes care of default link applied by browser */
 }
 
-h1 {
-    font-family: Oswald, sans-serif;
-    text-transform: uppercase; /* To easily change the casing */
-    letter-spacing: 2px; /* Provides breathing space between the letters */
-    color: #252525; /* stands out from the other links */
-}
+
 
 #menu {
-    font-size: 110%; /* font size to links */
-    letter-spacing: 4px; /* letters spaced by 4px */
-    list-style-type: none; /* No bullet points */
+    font-size: 110%;
+    /* font size to links */
+    letter-spacing: 4px;
+    /* letters spaced by 4px */
+    list-style-type: none;
+    /* No bullet points */
 }
 
-#menu > li {
-    margin-bottom: 1em; /* Targets list items inside menu, spaced vertically */
+#menu>li {
+    margin-bottom: 1em;
+    /* Targets list items inside menu, spaced vertically */
 }
 
 .active {
-    border-bottom: 1px solid #3a3a3a; /* To give the home menu a visual queue */ 
+    border-bottom: 1px solid #3a3a3a;
+    /* To give the home menu a visual queue */
 }
 
-/* Navbar styles with dropdown toggle */ 
+/* Navbar styles with dropdown toggle */
 nav {
-    position: absolute; /* Takes an element outside the normal flow of the page structure */
+    position: absolute;
+    /* Takes an element outside the normal flow of the page structure */
     background-color: #ffffff;
-    width: 100%; /* Full length of screen */
-    left: 0; /* Align directly against left of screen */
-    padding: 0 1rem; /* Padding to line up nav elements below the logo */
-    box-shadow: 0 2px 2px #3a3a3a; /* box-shadow like one on the header */
-    display: none; /* so that the navbar items are hidden until user clicks to open */
-    top: 100%; /* Tells the navigation element that the top should start at the bottom of it's parent */
+    width: 100%;
+    /* Full length of screen */
+    left: 0;
+    /* Align directly against left of screen */
+    padding: 0 1rem;
+    /* Padding to line up nav elements below the logo */
+    box-shadow: 0 2px 2px #3a3a3a;
+    /* box-shadow like one on the header */
+    display: none;
+    /* so that the navbar items are hidden until user clicks to open */
+    top: 100%;
+    /* Tells the navigation element that the top should start at the bottom of it's parent */
 }
 
 /* Nav toggle, checkboxes have a pseudo class which indicates when they are checked */
-#nav-toggle:checked~nav{ /* Tilde to indicate we want to target the adjoining nav element */
-     display: block;
+#nav-toggle:checked~nav {
+    /* Tilde to indicate we want to target the adjoining nav element */
+    display: block;
 }
 
 #nav-toggle {
-    display: none; /* Hide the checkbox */
+    display: none;
+    /* Hide the checkbox */
 }
 
 .nav-toggle-label {
-    font-size: 2rem; /* Make label larger so it's easier to tap */
+    font-size: 2rem;
+    /* Make label larger so it's easier to tap */
 }
 
 
@@ -94,50 +125,100 @@ main {
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down and should not shrink when screen is too small to show all the content */
     flex: 1 0 auto;
-    margin-top: 47px; /* To push the content down of place holder text */
+    margin-top: 47px;
+    /* To push the content down of place holder text */
 }
+
+/*Hero Section Styles */
+#hero {
+    height: 600px;
+    /* To make sure the image has space to show up */
+    width: 100%;
+    /* So it takes entire width of the screen */
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    /*To show the hero image use url and file structure */
+    position: relative;
+}
+
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi transparent */
+    background-color: rgba(241, 109, 107, 7); 
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px; /* Doesnt overlap the runners face */
+    width: 80%; /* It doesnt cover the full width of screen */
+    min-height: 200px; 
+    padding: 40px;/* so text doesnt stick to the top of cover text div */
+    padding-left: 10px; /* Space it out a bit from edge of the screen */
+}
+
+#cover-text > h2, #cover-text > h3 {
+    /* set text to white, targets any h2 or h3 that is direct child of the cover-text div */
+    color: #ffffff;
+}
+
+
+
+
+/* set other background properties, set image horizontaly and vertically centered and does not repeat and cover hero section without distorting */
 
 /* Footer */
 #social-networks {
-    text-align: center; /*Footer icons to be centered */
-    padding: 20px 0; /* Add vertical breathing space above and below icons */
-    display: flex; /* use flex-box to place icons evenly along the footer */
+    text-align: center;
+    /*Footer icons to be centered */
+    padding: 20px 0;
+    /* Add vertical breathing space above and below icons */
+    display: flex;
+    /* use flex-box to place icons evenly along the footer */
     justify-content: space-evenly;
-    list-style-type: none; /* To remove bullet points because they are list items */
+    list-style-type: none;
+    /* To remove bullet points because they are list items */
 }
 
-#social-networks i { /* targets all i element descendents of social network lists */
-     font-size: 160%; /* so the icons appear larger */
-     padding: 5%; /* To create some extra space around icons */
-     color: #3a3a3a;
+#social-networks i {
+    /* targets all i element descendents of social network lists */
+    font-size: 160%;
+    /* so the icons appear larger */
+    padding: 5%;
+    /* To create some extra space around icons */
+    color: #3a3a3a;
 }
 
 /* Media query: Tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header, to make sure the nav-bar is always displayed */
     nav {
         display: block;
-        position: relative; /* Back inside the header */
-        box-shadow: none; /* hide as its no longer needed */
-        width: fit-content; /* No longer taking up space in header */
-        padding-right: 1rem; /* So menu items do not stick to edge */
+        position: relative;
+        /* Back inside the header */
+        box-shadow: none;
+        /* hide as its no longer needed */
+        width: fit-content;
+        /* No longer taking up space in header */
+        padding-right: 1rem;
+        /* So menu items do not stick to edge */
     }
 
     #menu {
-        display: flex; /* To set links side by side */
+        display: flex;
+        /* To set links side by side */
     }
 
-    #menu > li {
-        padding-left: 1rem; /* Add padding to the left of each list item in the menu */
+    #menu>li {
+        padding-left: 1rem;
+        /* Add padding to the left of each list item in the menu */
     }
 
     .nav-toggle-label {
-        display: none; /* Hide the x */
+        display: none;
+        /* Hide the x */
     }
 
     #logo {
         font-size: 280%;
-        line-height: 75px; /* To give it more space at the top */
+        line-height: 75px;
+        /* To give it more space at the top */
         margin: 0 0.5rem;
     }
 
@@ -146,13 +227,20 @@ main {
         /* Push main content down to accomodate larger header */
         margin-top: 79px;
     }
+
+    /* Hero text styled on tablet view to override */
+    #cover-text {
+    width: 300px;
+    right: 50px;
+
 }
 
 /* Large devices (Laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover { /* hover pseudo class */
-        border-bottom: 1px solid #3a3a3a; /* Targets a tags that are descendents of the menu when hovered */
+    #menu a:hover {
+        /* hover pseudo class */
+        border-bottom: 1px solid #3a3a3a;
+        /* Targets a tags that are descendents of the menu when hovered */
     }
-    
+
 }
-    
