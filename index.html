@@ -25,11 +25,11 @@
             <h1 id="logo">Love Fitness</h1>
             <!-- h1 followed by # to indicate h1 to have an id, same way to target ids in css and . to add classes -->
         </a>
-        
+
         <!-- Functionality to open and close the menu, known as toggling using below elements -->
         <input type="checkbox" id="nav-toggle" name="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">x</label> <!-- id of checkbox added to the for attribute-->
-        
+
         <!-- Nav-bar, navigation section -->
         <nav>
             <ul id="menu">
@@ -48,8 +48,24 @@
     <main>Main Content</main>
 
     <!-- Footer -->
-    <footer>Footer</footer>
+    <footer>
+        <ul>
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener"
+                    aria-label="visit our Facebook page(opens in a new tab)"> <i
+                        class="fa-brands fa-facebook"></i></a></a></li>
+            <!-- target_blank allows to open in new tab,rel=noopener protects site from attack, aria-label=visitourfacebookpage for screenreader users -->
+            <li><a href="https://www.twitter.com" target="_blank" rel="noopener"
+                    aria-label="visit our Twitter page(opens in a new tab)"><i
+                        class="fa-brands fa-twitter-square"></i></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our YouTube page (opens in a new tab)"> <i
+                        class="fa-brands fa-youtube-square"></i></a></li>
+        </ul>
+    </footer>
+    
+    <!-- Font Awesome kit,good practice to place js script at the bottom of html file-->
 
+    <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
