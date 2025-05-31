@@ -35,7 +35,10 @@ h3 {
     color: #252525;
     /* stands out from the other links */
 }
-
+/* Utility class */
+.hidden-heading {
+    display: none;
+}
 /* Header */
 header {
     background-color: #ffffff;
