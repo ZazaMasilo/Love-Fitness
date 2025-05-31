@@ -274,6 +274,14 @@ main {
     color: #3a3a3a;
 }
 
+/* Media query: Large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        color-scheme: 0;
+    }
+}
+
 /* Media query: Tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
@@ -304,6 +312,7 @@ main {
         display: none;
         /* Hide the x */
     }
+
 
     #logo {
         font-size: 280%;
@@ -340,6 +349,11 @@ main {
         text-align: end; /* Align to the right */
         align-self: flex-end ;
     }
+
+    /* Gallery styles */
+    #photos {
+        column-count: 3;
+    }
 }
 
 /* Large devices (Laptops and desktops, 992px and up) */
@@ -348,6 +362,11 @@ main {
         /* hover pseudo class */
         border-bottom: 1px solid #3a3a3a;
         /* Targets a tags that are descendents of the menu when hovered */
+    }
+
+     /* Gallery styles */
+     #photos {
+        column-count: 4;
     }
 
 }
