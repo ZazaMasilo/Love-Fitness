@@ -24,7 +24,9 @@ body {
 
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
     /* To easily change the casing */
@@ -142,17 +144,22 @@ main {
 
 #cover-text {
     /* Final rgba value sets the opacity so it is semi transparent */
-    background-color: rgba(241, 109, 107, 7); 
+    background-color: rgba(241, 109, 107, 7);
     font-size: 130%;
     position: absolute;
-    bottom: 30px; /* Doesnt overlap the runners face */
-    width: 80%; /* It doesnt cover the full width of screen */
-    min-height: 200px; 
-    padding: 40px;/* so text doesnt stick to the top of cover text div */
-    padding-left: 10px; /* Space it out a bit from edge of the screen */
+    bottom: 30px;
+    /* Doesnt overlap the runners face */
+    width: 80%;
+    /* It doesnt cover the full width of screen */
+    min-height: 200px;
+    padding: 40px;
+    /* so text doesnt stick to the top of cover text div */
+    padding-left: 10px;
+    /* Space it out a bit from edge of the screen */
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     /* set text to white, targets any h2 or h3 that is direct child of the cover-text div */
     color: #ffffff;
 }
@@ -230,9 +237,36 @@ main {
 
     /* Hero text styled on tablet view to override */
     #cover-text {
-    width: 300px;
-    right: 50px;
+        width: 300px;
+        right: 50px;
 
+    }
+
+    /* Reasons section */
+    #reasons {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #reasons h2 {
+        margin-bottom: 20px; /* Space at the bottom */
+        text-align: center; /* centered text */
+        font-size: 280%; /* Increase font size */
+    }
+
+    #benefits-physical>div, #benefits-mental>div {
+        line-height: 20px;
+        margin-bottom: 20px; /* Direct children of benefits physical and mental */
+    }
+
+    #benefits p {
+        padding: 0 20px;
+    }
+
+    hr {
+        border-top: 1px solid #3a3a3a;
+        margin: 5px 0;
+    }
 }
 
 /* Large devices (Laptops and desktops, 992px and up) */
