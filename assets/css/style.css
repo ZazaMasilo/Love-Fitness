@@ -169,6 +169,51 @@ main {
 
 /* set other background properties, set image horizontaly and vertically centered and does not repeat and cover hero section without distorting */
 
+ /* Reasons section */
+ #reasons {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#reasons h2 {
+    margin-bottom: 20px; /* Space at the bottom */
+    text-align: center; /* centered text */
+    font-size: 280%; /* Increase font size */
+}
+
+#benefits-physical>div, #benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px; /* Direct children of benefits physical and mental */
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#circle-cover-bg {
+    background: url('../images/reasons-image.webp') no-repeat top center / cover ;
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+    /* Makes the square image into a circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px; /* The image doesn't take up too much space */
+
+    /* Image to be centered on screen add some flex box properties */
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+}
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -242,30 +287,20 @@ main {
 
     }
 
-    /* Reasons section */
-    #reasons {
-        width: 90%;
-        margin: 20px auto;
+    /* Reasons Section */
+    #benefits-physical, benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
-    #reasons h2 {
-        margin-bottom: 20px; /* Space at the bottom */
-        text-align: center; /* centered text */
-        font-size: 280%; /* Increase font size */
+    #benefits-physical > div, benefits-mental > div {
+        width: 75%;
     }
 
-    #benefits-physical>div, #benefits-mental>div {
-        line-height: 20px;
-        margin-bottom: 20px; /* Direct children of benefits physical and mental */
-    }
-
-    #benefits p {
-        padding: 0 20px;
-    }
-
-    hr {
-        border-top: 1px solid #3a3a3a;
-        margin: 5px 0;
+    benefits-mental > div {
+        text-align: end; /* Align to the right */
+        align-self: flex-end ;
     }
 }
 
@@ -277,4 +312,33 @@ main {
         /* Targets a tags that are descendents of the menu when hovered */
     }
 
+}
+
+/* Should be at the bottom for largest screen size */
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits > div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-end;
+    }
 }
